@@ -1,0 +1,16 @@
+.grouped-menu-item-level-2-header-container {
+  display: flex;
+  justify-content: space-between;
+  width: 180px;
+  padding-right: 15px;
+}
+
+.grouped-menu-item-level-2-header-container > span {
+  font-weight: normal;
+  color: #4A4A4A;
+}
+
+.grouped-menu-item-level-2-header-container:hover > span {
+  font-weight: bold;
+  color: black;
+}

@@ -1,0 +1,20 @@
+html body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 14px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.menu-root {
+  display: flex;
+  align-items: stretch;
+  background-color: #222;
+  height: 40px;
+  padding-right: 15px;
+}
+
+.menu-root > div:nth-last-child(3) {
+  margin-left: auto;
+}
