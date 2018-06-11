@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import MenuItemLevel1 from "./shared/components/menu-item-level-1";
+import TopMenuLoader from './shared/components/top-menu-loader'
 
 class App extends Component {
   constructor(props) {
@@ -24,14 +25,12 @@ class App extends Component {
     return this.state.loading 
     ? (
       <div className="menu-root">
-        <div className="loader-outer">
-          <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
-        </div>
+        <TopMenuLoader/>
       </div>
     )
     : (
       <div className="menu-root">
-          {topLevelItems}
+        {topLevelItems}
       </div>
     );
   }

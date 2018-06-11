@@ -5,7 +5,7 @@ import "./index.css";
 
 class MenuItemLevel2GroupHeader extends Component {
   render() {
-    const { id, onMouseOver } = this.props;
+    const { title, onMouseOver } = this.props;
     return (
       <div className="grouped-menu-item-level-2-header-container">
         <a
@@ -13,7 +13,7 @@ class MenuItemLevel2GroupHeader extends Component {
           className="grouped-menu-item-level-2-header"
           href=""
         >
-          {id}
+          {title}
         </a>
         <span>></span>
       </div>

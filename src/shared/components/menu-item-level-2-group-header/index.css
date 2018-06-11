@@ -14,3 +14,40 @@
   font-weight: bold;
   color: black;
 }
+
+.grouped-menu-item-level-2-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.grouped-menu-item-level-2-header {
+  color: black;
+  padding: 5px 15px 5px 15px;
+  text-decoration: none;
+  display: block;
+  white-space: nowrap;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 19px;
+  text-transform: uppercase;
+}
+
+.grouped-menu-item-level-2-callout {
+  display: flex;
+  flex-direction: column;
+}
+
+.simple-menu-item-level-3-link {
+  color: black;
+  padding: 5px 15px 5px 15px;
+  text-decoration: none;
+  white-space: nowrap;
+  display: flex;
+  flex-grow: inherit;
+}
+
+/* Change color of dropdown links on hover */
+.simple-menu-item-level-3-link:hover {
+  cursor: pointer;
+  background-color: #d9e8f3;
+}

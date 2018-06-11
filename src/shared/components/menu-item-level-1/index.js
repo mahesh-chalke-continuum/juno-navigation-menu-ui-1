@@ -2,12 +2,12 @@ import React, { Component } from "react";
 import visibleIfEnabled from "../visibleIfEnabled";
 import withTargetUrl from "../withTargetUrl";
 import SimpleMenuItemLevel2 from "../simple-menu-item-level-2";
+import MenuItemLevel2GroupHeader from "../menu-item-level-2-group-header";
 import "./index.css";
 
 class MenuItemLevel1 extends Component {
   
   render() {
-    console.log(this.props.elementId);
     return (
       <div
         className={
@@ -26,8 +26,9 @@ class MenuItemLevel1 extends Component {
         {
           this.props.childItems && this.props.childItems.length > 0 &&
             <div className="menu-item-level-1-content">
-              {this.props.childItems.map(c =>
-                <SimpleMenuItemLevel2 {...c} />
+              {this.props.childItems.map(c => c.groupHeader
+                  ? <MenuItemLevel2GroupHeader {...c} />
+                  : <SimpleMenuItemLevel2 {...c} />
               )}
             </div>
         }
