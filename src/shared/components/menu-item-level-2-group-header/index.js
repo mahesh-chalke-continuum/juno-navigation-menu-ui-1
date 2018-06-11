@@ -6,12 +6,12 @@ import "./index.css";
 class MenuItemLevel2GroupHeader extends Component {
   render() {
     const { title, onMouseOver } = this.props;
+    
     return (
       <div className="grouped-menu-item-level-2-header-container">
         <a
           onMouseOver={onMouseOver}
           className="grouped-menu-item-level-2-header"
-          href=""
         >
           {title}
         </a>

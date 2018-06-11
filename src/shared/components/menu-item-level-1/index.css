@@ -20,7 +20,7 @@
 
 /* Show the dropdown menu on hover */
 .menu-item-level-1:hover .menu-item-level-1-content {
-  display: block;
+  display: flex;
 }
 
 .menu-item-level-1-content {

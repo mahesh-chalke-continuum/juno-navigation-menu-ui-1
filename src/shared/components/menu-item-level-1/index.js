@@ -6,6 +6,12 @@ import MenuItemLevel2GroupHeader from "../menu-item-level-2-group-header";
 import "./index.css";
 
 class MenuItemLevel1 extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      calloutItems: []
+    }
+  }
   
   render() {
     return (
@@ -26,10 +32,24 @@ class MenuItemLevel1 extends Component {
         {
           this.props.childItems && this.props.childItems.length > 0 &&
             <div className="menu-item-level-1-content">
-              {this.props.childItems.map(c => c.groupHeader
-                  ? <MenuItemLevel2GroupHeader {...c} />
-                  : <SimpleMenuItemLevel2 {...c} />
-              )}
+              <div className="grouped-menu-item-level-2-container">
+                <div className="grouped-menu-item-level-2-dropdown">
+                  {this.props.childItems.map(c => c.groupHeader
+                        ? <MenuItemLevel2GroupHeader 
+                            {...c} 
+                            onMouseOver={() => {
+                              this.setState({ calloutItems: c.childItems });
+                            }}
+                          />
+                        : <SimpleMenuItemLevel2 {...c} />
+                  )}
+                </div>
+                <div className="grouped-menu-item-level-2-callout">
+                  { this.state.calloutItems.length > 0
+                  ? this.state.calloutItems.map(co => <SimpleMenuItemLevel2 {...co} />)
+                  : null }
+                </div>
+              </div>
             </div>
         }
       </div>
