@@ -16,15 +16,30 @@ class App extends Component {
   constructor(props) {
     super(props)
 
-    this.state = {}
+    this.state = {
+      loading: true
+    }
   }
 
   componentDidMount() {
+    setTimeout(() => {
+      this.setState({ loading: false })
+    }, window.topNavDelay);
+
     this.setState(window.menumetadata || {})
   }
 
   render() {
-    return (
+    return this.state.loading 
+    ? (
+      <div className="menu-root">
+       <div className="loader-outer">
+       
+        <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+        </div>
+      </div>
+    )
+    : (
       <div className="menu-root">
         <CustomerLogo />
         <DashboardMenu {...this.state['dashboard-menu']} />
