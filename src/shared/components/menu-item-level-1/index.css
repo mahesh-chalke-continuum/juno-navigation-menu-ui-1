@@ -42,3 +42,7 @@
   border-bottom: 4px solid #222;
   color: #fff;
 }
+
+.no-bottom-highlight, .no-bottom-highlight:hover {
+  border: none !important;
+}
