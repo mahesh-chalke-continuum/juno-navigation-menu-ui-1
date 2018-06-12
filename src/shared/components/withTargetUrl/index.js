@@ -13,7 +13,7 @@ export default function(WrappedComponent) {
             c.type === "a"
               ? React.cloneElement(
                   c,
-                  { ...c.props, href: this.props.targeturl, key: {key} },
+                  { ...c.props, href: this.props.targeturl, key: { key } },
                   c.props.children
                 )
               : c

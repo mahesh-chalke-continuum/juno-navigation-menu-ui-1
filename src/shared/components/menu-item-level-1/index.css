@@ -20,7 +20,7 @@
 
 /* Show the dropdown menu on hover */
 .menu-item-level-1:hover .menu-item-level-1-content {
-  display: block;
+  display: flex;
 }
 
 .menu-item-level-1-content {
@@ -43,6 +43,7 @@
   color: #fff;
 }
 
-.no-bottom-highlight, .no-bottom-highlight:hover {
+.no-bottom-highlight,
+.no-bottom-highlight:hover {
   border: none !important;
 }
